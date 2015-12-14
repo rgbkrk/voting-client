@@ -1,13 +1,18 @@
 /* eslint no-path-concat: 0 */
+
+const webpack = require('webpack');
+
 module.exports = {
   entry: [
-    './src/index.js',
+    'webpack-dev-server/client?http://localhost:8080',
+    'webpack/hot/only-dev-server',
+    './src/index.jsx',
   ],
   module: {
     loaders: [{
       test: /\.jsx?$/,
       exclude: /node_modules/,
-      loader: 'babel',
+      loader: 'react-hot!babel',
     }, {
       test: /\.css$/,
       loader: 'style!css!autoprefixer?browsers=last 2 versions',
@@ -23,5 +28,9 @@ module.exports = {
   },
   devServer: {
     contentBase: './dist',
+    hot: true,
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+  ],
 };
