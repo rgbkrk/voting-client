@@ -4,6 +4,7 @@
   "description": "The frontend side of https://github.com/rgbkrk/voting-server, following along with http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html",
   "main": "index.js",
   "scripts": {
+    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js 'test/**/*.@(js|jdx)'"
     "start": "babel-node index.js",
     "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
