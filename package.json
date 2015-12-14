@@ -1,0 +1,22 @@
+{
+  "name": "voting-client",
+  "version": "1.0.0",
+  "description": "The frontend side of https://github.com/rgbkrk/voting-server, following along with http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node index.js",
+    "lint": "eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rgbkrk/voting-client.git"
+  },
+  "keywords": [],
+  "author": "Kyle Kelley <rgbkrk@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/rgbkrk/voting-client/issues"
+  },
+  "homepage": "https://github.com/rgbkrk/voting-client#readme"
+}
