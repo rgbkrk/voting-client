@@ -35,6 +35,11 @@ export default React.createClass({
         {this.getPair().map(entry =>
           <div key={entry} className='entry'>
             <h1>{entry}</h1>
+            <div className='voteVisualization'>
+              <div className='votesBlock'
+                    style={{ width: this.getVotesBlockWidth(entry) }}>
+              </div>
+            </div>
             <div className='voteCount'>
               {this.getVotes(entry)}
             </div>
