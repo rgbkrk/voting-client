@@ -4,7 +4,7 @@
   "description": "The frontend side of https://github.com/rgbkrk/voting-server, following along with http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js 'test/**/*.@(js|jdx)'",
+    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js 'test/**/*.@(js|jsx)'",
     "test:watch": "npm run test -- --watch",
     "start": "babel-node index.js",
     "lint": "eslint ."
@@ -28,6 +28,7 @@
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "chai": "^3.4.1",
+    "chai-immutable": "^1.5.3",
     "css-loader": "^0.23.0",
     "eslint": "^1.10.3",
     "eslint-plugin-babel": "^3.0.0",
@@ -47,6 +48,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.1",
+    "immutable": "^3.7.5",
     "react": "^0.14.3",
     "react-dom": "^0.14.3"
   }
