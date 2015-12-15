@@ -16,8 +16,8 @@ store.dispatch({
   type: 'SET_STATE',
   state: {
     vote: {
-      pair: ['Sunshine', '28 Days Later'],
-      tally: { Sunshine: 2 },
+      pair: ['Sunshine', 'Frozen'],
+      tally: { Sunshine: 2, Frozen: 6 },
     },
   },
 });
