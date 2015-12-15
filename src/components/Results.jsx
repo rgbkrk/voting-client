@@ -11,7 +11,7 @@ export default React.createClass({
   displayName: 'Results',
   propTypes: {
     next: React.PropTypes.func,
-    pair: ImmutablePropTypes.list,
+    pair: React.PropTypes.any,
     tally: React.PropTypes.any,
     winner: React.PropTypes.string,
   },

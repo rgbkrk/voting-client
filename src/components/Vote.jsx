@@ -5,7 +5,7 @@ import PureRenderMixin from 'react-addons-pure-render-mixin';
 export default React.createClass({
   displayName: 'Vote',
   propTypes: {
-    hasVoted: React.PropTypes.bool,
+    hasVoted: React.PropTypes.string,
     pair: React.PropTypes.array,
     vote: React.PropTypes.func,
   },
