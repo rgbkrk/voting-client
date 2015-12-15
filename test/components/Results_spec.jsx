@@ -1,9 +1,12 @@
-import React from 'react/addons';
+import React from 'react';
 import { List, Map } from 'immutable';
 import Results from '../../src/components/Results';
 import { expect } from 'chai';
 
-const { renderIntoDocument, scryRenderedDOMComponentsWithClass } = React.addons.TestUtils;
+import {
+  renderIntoDocument,
+  scryRenderedDOMComponentsWithClass,
+} from 'react-addons-test-utils';
 
 describe('Results', () => {
   it('renders entries with vote counts or zero', () => {
