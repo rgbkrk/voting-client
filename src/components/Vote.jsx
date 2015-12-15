@@ -6,7 +6,7 @@ export default React.createClass({
   displayName: 'Vote',
   propTypes: {
     hasVoted: React.PropTypes.string,
-    pair: React.PropTypes.array,
+    pair: React.PropTypes.object,
     vote: React.PropTypes.func,
   },
   mixins: [PureRenderMixin],
