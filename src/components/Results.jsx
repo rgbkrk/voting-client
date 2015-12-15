@@ -1,6 +1,5 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
-import ImmutablePropTypes from 'react-immutable-proptypes';
 
 import Winner from './Winner';
 import Tally from './Tally';
