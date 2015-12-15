@@ -2,6 +2,8 @@ import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import ImmutablePropTypes from 'react-immutable-proptypes';
 
+import Winner from './Winner';
+
 export const VOTE_WIDTH_PERCENT = 8;
 
 export default React.createClass({
@@ -10,6 +12,7 @@ export default React.createClass({
     next: React.PropTypes.func,
     pair: ImmutablePropTypes.list,
     tally: React.PropTypes.any,
+    winner: React.PropTypes.string,
   },
   mixins: [PureRenderMixin],
   getPair() {
@@ -25,7 +28,9 @@ export default React.createClass({
     return (this.getVotes(entry) * VOTE_WIDTH_PERCENT) + '%';
   },
   render() {
-    return <div className='results'>
+    return this.props.winner ?
+    <Winner ref='winner' winner={this.props.winner} /> :
+    <div className='results'>
       <div className='tally'>
         {this.getPair().map(entry =>
           <div key={entry} className='entry'>
