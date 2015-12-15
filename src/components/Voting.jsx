@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import Winner from './Winner';
 import Vote from './Vote';
 
-const Voting = React.createClass({
+export const Voting = React.createClass({
   displayName: 'Voting',
   propTypes: {
     winner: React.PropTypes.string,
@@ -27,6 +27,4 @@ function mapStateToProps(state) {
   };
 }
 
-connect(mapStateToProps)(Voting);
-
-export default Voting;
+export const VotingContainer = connect(mapStateToProps)(Voting);
