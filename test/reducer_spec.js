@@ -66,4 +66,44 @@ describe('reducer', () => {
       },
     }));
   });
+
+  it('handles UPVOTE by setting hasVoted', () => {
+    const state = fromJS({
+      vote: {
+        pair: ['Trainspotting', '28 Days Later'],
+        tally: { Trainspotting: 1 },
+      },
+    });
+
+    const action = { type: 'UPVOTE', entry: 'Trainspotting' };
+    const nextState = reducer(state, action);
+
+    expect(nextState).to.equal(fromJS({
+      vote: {
+        pair: ['Trainspotting', '28 Days Later'],
+        tally: { Trainspotting: 1 },
+      },
+      hasVoted: 'Trainspotting',
+    }));
+  });
+
+  it('does not set hasVoted for UPVOTE on invalid entry', () => {
+    const state = fromJS({
+      vote: {
+        pair: ['Trainspotting', '28 Days Later'],
+        tally: { Trainspotting: 1 },
+      },
+    });
+
+    const action = { type: 'UPVOTE', entry: 'Sunshine' };
+    const nextState = reducer(state, action);
+
+    expect(nextState).to.equal(fromJS({
+      vote: {
+        pair: ['Trainspotting', '28 Days Later'],
+        tally: { Trainspotting: 1 },
+      },
+    }));
+  });
+
 });
