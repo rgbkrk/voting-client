@@ -5,9 +5,9 @@ export function setState(state) {
   };
 }
 
-export function upvote(entry) {
+export function vote(entry) {
   return {
-    type: 'UPVOTE',
+    type: 'VOTE',
     entry,
   };
 }

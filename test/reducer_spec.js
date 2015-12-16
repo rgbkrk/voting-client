@@ -67,7 +67,7 @@ describe('reducer', () => {
     }));
   });
 
-  it('handles UPVOTE by setting hasVoted', () => {
+  it('handles VOTE by setting hasVoted', () => {
     const state = fromJS({
       vote: {
         pair: ['Trainspotting', '28 Days Later'],
@@ -75,7 +75,7 @@ describe('reducer', () => {
       },
     });
 
-    const action = { type: 'UPVOTE', entry: 'Trainspotting' };
+    const action = { type: 'VOTE', entry: 'Trainspotting' };
     const nextState = reducer(state, action);
 
     expect(nextState).to.equal(fromJS({
@@ -87,7 +87,7 @@ describe('reducer', () => {
     }));
   });
 
-  it('does not set hasVoted for UPVOTE on invalid entry', () => {
+  it('does not set hasVoted for VOTE on invalid entry', () => {
     const state = fromJS({
       vote: {
         pair: ['Trainspotting', '28 Days Later'],
@@ -95,7 +95,7 @@ describe('reducer', () => {
       },
     });
 
-    const action = { type: 'UPVOTE', entry: 'Sunshine' };
+    const action = { type: 'VOTE', entry: 'Sunshine' };
     const nextState = reducer(state, action);
 
     expect(nextState).to.equal(fromJS({
